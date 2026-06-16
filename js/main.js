@@ -91,40 +91,38 @@ contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const originalText    = submitBtn.textContent;
+
+    // Block submission if captcha hasn't been completed
+    const captchaResponse = contactForm.querySelector('[name="h-captcha-response"]');
+    if (!captchaResponse || !captchaResponse.value) {
+        const captchaDiv = document.querySelector('.h-captcha');
+        if (captchaDiv) {
+            captchaDiv.style.outline      = '2px solid rgba(239,68,68,0.55)';
+            captchaDiv.style.borderRadius = '6px';
+            setTimeout(() => { captchaDiv.style.outline = ''; }, 3000);
+        }
+        return;
+    }
+
     submitBtn.textContent = 'Sending…';
     submitBtn.disabled    = true;
 
     try {
-        /*
-         * TO CONNECT A REAL BACKEND:
-         * ─────────────────────────────────────────────────
-         * Option 1 — Formspree (free, no server needed):
-         *   1. Go to https://formspree.io and sign up
-         *   2. Create a new form → copy your Form ID
-         *   3. Replace the simulation below with:
-         *
-         *   const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-         *       method: 'POST',
-         *       body: new FormData(contactForm),
-         *       headers: { 'Accept': 'application/json' }
-         *   });
-         *   if (!res.ok) throw new Error('Submission failed');
-         *
-         * ─────────────────────────────────────────────────
-         * Option 2 — EmailJS (also free, no server needed):
-         *   See https://www.emailjs.com/docs/
-         * ─────────────────────────────────────────────────
-         */
+        const res  = await fetch('https://api.web3forms.com/submit', {
+            method:  'POST',
+            body:    new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+        });
+        const data = await res.json();
 
-        // Simulation — remove once Formspree is connected
-        await new Promise(resolve => setTimeout(resolve, 1400));
+        if (!data.success) throw new Error(data.message || 'Submission failed');
 
         // Success state
         contactForm.reset();
         formSuccess.classList.add('show');
-        submitBtn.textContent         = 'Message Sent ✓';
-        submitBtn.style.background    = 'rgba(34,197,94,0.25)';
-        submitBtn.style.borderColor   = 'rgba(34,197,94,0.4)';
+        submitBtn.textContent       = 'Message Sent ✓';
+        submitBtn.style.background  = 'rgba(34,197,94,0.25)';
+        submitBtn.style.borderColor = 'rgba(34,197,94,0.4)';
 
         setTimeout(() => {
             formSuccess.classList.remove('show');
