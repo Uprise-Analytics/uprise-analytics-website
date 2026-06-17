@@ -1113,7 +1113,7 @@ ul   { list-style: none; }
     .form-group input,
     .form-group select,
     .form-group textarea { font-size: 16px; }
-    .h-captcha         { overflow: hidden; }
+    .h-captcha         { transform: scale(0.82); transform-origin: center top; margin-bottom: -14px; }
 
     /* ---- Footer ---- */
     .footer-container  { flex-direction: column; text-align: center; gap: 16px; }
