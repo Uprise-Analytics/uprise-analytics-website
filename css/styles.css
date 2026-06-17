@@ -705,7 +705,7 @@ ul   { list-style: none; }
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     gap: 80px;
-    align-items: stretch;
+    align-items: center;
 }
 
 .about-card {
@@ -715,7 +715,7 @@ ul   { list-style: none; }
     color: var(--color-white);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 28px;
 }
 
 .about-logo {
@@ -750,10 +750,6 @@ ul   { list-style: none; }
 }
 
 /* About text side */
-.about-content {
-    display: flex;
-    flex-direction: column;
-}
 .about-content .section-badge { display: inline-block; margin-bottom: 12px; }
 .about-content .section-title { text-align: left; margin-bottom: 24px; }
 
@@ -764,7 +760,7 @@ ul   { list-style: none; }
     margin-bottom: 16px;
 }
 
-.about-content .btn { margin-top: auto; padding-top: 40px; }
+.about-content .btn { margin-top: 32px; }
 
 
 /* ================================================
