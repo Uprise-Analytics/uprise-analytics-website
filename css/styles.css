@@ -563,7 +563,7 @@ ul   { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 22px;
+    margin: 0 auto 22px;
     flex-shrink: 0;
 }
 
