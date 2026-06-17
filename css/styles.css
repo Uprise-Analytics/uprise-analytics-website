@@ -705,7 +705,7 @@ ul   { list-style: none; }
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     gap: 80px;
-    align-items: center;
+    align-items: start;
 }
 
 .about-card {
@@ -760,7 +760,7 @@ ul   { list-style: none; }
     margin-bottom: 16px;
 }
 
-.about-content .btn { margin-top: 8px; }
+.about-content .btn { margin-top: 40px; }
 
 
 /* ================================================
