@@ -904,10 +904,6 @@ ul   { list-style: none; }
     font-size: 0.72rem;
 }
 
-.h-captcha {
-    display: flex;
-    justify-content: center;
-}
 
 .form-success {
     display: none;
@@ -1113,7 +1109,6 @@ ul   { list-style: none; }
     .form-group input,
     .form-group select,
     .form-group textarea { font-size: 16px; }
-    .h-captcha         { justify-content: center; }
 
     /* ---- Footer ---- */
     .footer-container  { flex-direction: column; text-align: center; gap: 16px; }

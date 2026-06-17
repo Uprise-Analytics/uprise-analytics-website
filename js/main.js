@@ -92,18 +92,6 @@ contactForm.addEventListener('submit', async (e) => {
 
     const originalText    = submitBtn.textContent;
 
-    // Block submission if captcha hasn't been completed
-    const captchaResponse = contactForm.querySelector('[name="h-captcha-response"]');
-    if (!captchaResponse || !captchaResponse.value) {
-        const captchaDiv = document.querySelector('.h-captcha');
-        if (captchaDiv) {
-            captchaDiv.style.outline      = '2px solid rgba(239,68,68,0.55)';
-            captchaDiv.style.borderRadius = '6px';
-            setTimeout(() => { captchaDiv.style.outline = ''; }, 3000);
-        }
-        return;
-    }
-
     submitBtn.textContent = 'Sending…';
     submitBtn.disabled    = true;
 
