@@ -107,7 +107,7 @@ contactForm.addEventListener('submit', async (e) => {
 
         // Track lead in Google Analytics
         if (typeof gtag !== 'undefined') {
-            gtag('event', 'generate_lead', {
+            gtag('event', 'contact_form_submitted', {
                 event_category: 'Contact Form',
                 event_label: 'Book Free Consultation'
             });
