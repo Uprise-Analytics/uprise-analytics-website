@@ -105,6 +105,14 @@ contactForm.addEventListener('submit', async (e) => {
 
         if (!data.success) throw new Error(data.message || 'Submission failed');
 
+        // Track lead in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'generate_lead', {
+                event_category: 'Contact Form',
+                event_label: 'Book Free Consultation'
+            });
+        }
+
         // Success state
         contactForm.reset();
         formSuccess.classList.add('show');
