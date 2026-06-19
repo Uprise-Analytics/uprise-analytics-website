@@ -144,10 +144,22 @@ contactForm.addEventListener('submit', async (e) => {
 });
 
 
-/* ---- Cookie Consent Banner ---- */
-const cookieBanner  = document.getElementById('cookieBanner');
-const cookieAccept  = document.getElementById('cookieAccept');
-const cookieDecline = document.getElementById('cookieDecline');
+/* ---- Cookie Consent ---- */
+const cookieBanner     = document.getElementById('cookieBanner');
+const cookieAccept     = document.getElementById('cookieAccept');
+const cookieManage     = document.getElementById('cookieManage');
+const cookieModal      = document.getElementById('cookieModal');
+const cookieModalClose = document.getElementById('cookieModalClose');
+const cookieSavePrefs  = document.getElementById('cookieSavePrefs');
+const analyticsToggle  = document.getElementById('analyticsToggle');
+
+function hideBanner() { cookieBanner.classList.remove('visible'); }
+function openModal()  {
+    const saved = localStorage.getItem('analyticsConsent');
+    if (saved !== null) analyticsToggle.checked = saved === 'true';
+    cookieModal.classList.add('open');
+}
+function closeModal() { cookieModal.classList.remove('open'); }
 
 if (!localStorage.getItem('cookieConsent')) {
     cookieBanner.classList.add('visible');
@@ -155,12 +167,19 @@ if (!localStorage.getItem('cookieConsent')) {
 
 cookieAccept.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', 'accepted');
-    cookieBanner.classList.remove('visible');
+    localStorage.setItem('analyticsConsent', 'true');
+    hideBanner();
 });
 
-cookieDecline.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'declined');
-    cookieBanner.classList.remove('visible');
+cookieManage.addEventListener('click', openModal);
+cookieModalClose.addEventListener('click', closeModal);
+cookieModal.querySelector('.cookie-modal__overlay').addEventListener('click', closeModal);
+
+cookieSavePrefs.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'customized');
+    localStorage.setItem('analyticsConsent', analyticsToggle.checked ? 'true' : 'false');
+    closeModal();
+    hideBanner();
 });
 
 

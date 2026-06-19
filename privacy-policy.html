@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Disable GA if user opted out -->
+    <script>if (localStorage.getItem('analyticsConsent') === 'false') { window['ga-disable-G-B9ZDE1XXMC'] = true; }</script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9ZDE1XXMC"></script>
     <script>
@@ -286,8 +289,44 @@
                 <a href="/privacy-policy.html" style="color: var(--color-accent-light); text-decoration: underline;">Learn more</a>
             </p>
             <div class="cookie-banner__actions">
-                <button id="cookieDecline" class="cookie-banner__decline">Decline</button>
-                <button id="cookieAccept" class="cookie-banner__accept">Accept</button>
+                <button id="cookieManage" class="cookie-banner__decline">Manage Cookies</button>
+                <button id="cookieAccept" class="cookie-banner__accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieModal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Cookie settings">
+        <div class="cookie-modal__overlay"></div>
+        <div class="cookie-modal__box">
+            <div class="cookie-modal__header">
+                <h2>Cookie Settings</h2>
+                <button id="cookieModalClose" class="cookie-modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="cookie-modal__body">
+                <div class="cookie-row">
+                    <div class="cookie-row__info">
+                        <strong>Essential Cookies</strong>
+                        <p>Required for the website to work properly. These cannot be disabled.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="cookie-toggle__slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-row">
+                    <div class="cookie-row__info">
+                        <strong>Analytics Cookies</strong>
+                        <p>Google Analytics — helps us understand how visitors use our site. No personal data is sold or shared.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="analyticsToggle" checked>
+                        <span class="cookie-toggle__slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal__footer">
+                <button id="cookieSavePrefs" class="cookie-banner__accept">Save Preferences</button>
             </div>
         </div>
     </div>
@@ -303,19 +342,38 @@
         });
 
         // Cookie consent
-        const cookieBanner  = document.getElementById('cookieBanner');
-        const cookieAccept  = document.getElementById('cookieAccept');
-        const cookieDecline = document.getElementById('cookieDecline');
+        const cookieBanner     = document.getElementById('cookieBanner');
+        const cookieAccept     = document.getElementById('cookieAccept');
+        const cookieManage     = document.getElementById('cookieManage');
+        const cookieModal      = document.getElementById('cookieModal');
+        const cookieModalClose = document.getElementById('cookieModalClose');
+        const cookieSavePrefs  = document.getElementById('cookieSavePrefs');
+        const analyticsToggle  = document.getElementById('analyticsToggle');
+
+        function hideBanner() { cookieBanner.classList.remove('visible'); }
+        function openModal()  {
+            const saved = localStorage.getItem('analyticsConsent');
+            if (saved !== null) analyticsToggle.checked = saved === 'true';
+            cookieModal.classList.add('open');
+        }
+        function closeModal() { cookieModal.classList.remove('open'); }
+
         if (!localStorage.getItem('cookieConsent')) {
             cookieBanner.classList.add('visible');
         }
         cookieAccept.addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'accepted');
-            cookieBanner.classList.remove('visible');
+            localStorage.setItem('analyticsConsent', 'true');
+            hideBanner();
         });
-        cookieDecline.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'declined');
-            cookieBanner.classList.remove('visible');
+        cookieManage.addEventListener('click', openModal);
+        cookieModalClose.addEventListener('click', closeModal);
+        cookieModal.querySelector('.cookie-modal__overlay').addEventListener('click', closeModal);
+        cookieSavePrefs.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'customized');
+            localStorage.setItem('analyticsConsent', analyticsToggle.checked ? 'true' : 'false');
+            closeModal();
+            hideBanner();
         });
     </script>
 
