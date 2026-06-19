@@ -144,6 +144,26 @@ contactForm.addEventListener('submit', async (e) => {
 });
 
 
+/* ---- Cookie Consent Banner ---- */
+const cookieBanner  = document.getElementById('cookieBanner');
+const cookieAccept  = document.getElementById('cookieAccept');
+const cookieDecline = document.getElementById('cookieDecline');
+
+if (!localStorage.getItem('cookieConsent')) {
+    cookieBanner.classList.add('visible');
+}
+
+cookieAccept.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    cookieBanner.classList.remove('visible');
+});
+
+cookieDecline.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    cookieBanner.classList.remove('visible');
+});
+
+
 /* ---- Smooth scroll (fallback for older browsers) ---- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
