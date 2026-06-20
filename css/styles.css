@@ -388,8 +388,18 @@ ul   { list-style: none; }
     flex-wrap: wrap;
 }
 
+.hero-slogan {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.02em;
+}
+
 .hero-trust {
-    margin-top: 16px;
+    margin-top: 8px;
     font-size: 0.82rem;
     color: rgba(255,255,255,0.48);
     letter-spacing: 0.01em;
@@ -950,6 +960,15 @@ ul   { list-style: none; }
 }
 
 .footer-nav a:hover { color: var(--color-accent); }
+
+.footer-tagline {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+}
 
 .footer-copy {
     font-size: 0.78rem;
