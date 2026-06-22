@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "upriseanalytics.co.za" }],
+      "destination": "https://www.upriseanalytics.co.za/$1",
+      "permanent": true
+    }
+  ]
+}
