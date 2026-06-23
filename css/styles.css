@@ -332,17 +332,16 @@ ul   { list-style: none; }
 
 .hero-container {
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 48px;
+    display: flex;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 64px;
-    max-width: 1300px;
+    justify-content: center;
+    padding: 80px 24px 64px;
 }
 
 .hero-content {
     text-align: center;
+    max-width: 780px;
+    width: 100%;
 }
 
 /* About card logo */
@@ -372,19 +371,19 @@ ul   { list-style: none; }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+    font-size: clamp(3rem, 6.5vw, 5.2rem);
     font-weight: 800;
     color: var(--color-white);
-    line-height: 1.12;
-    margin-bottom: 0;
+    line-height: 1.1;
+    margin-bottom: 28px;
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.72);
-    line-height: 1.8;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.85;
     margin-bottom: 40px;
-    max-width: 480px;
+    max-width: 620px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -413,46 +412,7 @@ ul   { list-style: none; }
     letter-spacing: 0.01em;
 }
 
-/* ================================================
-   HERO INTRO (below hero, dark continuation)
-   ================================================ */
-.hero-intro {
-    background: linear-gradient(180deg, #0c2640 0%, #0D1B2A 100%);
-    padding: 60px 0 72px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.hero-intro-inner {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-intro-text {
-    font-size: 1.08rem;
-    color: rgba(255,255,255,0.72);
-    line-height: 1.85;
-    margin-bottom: 36px;
-}
-
-/* Chart graphic */
-.hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chart-graphic {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius-lg);
-    padding: 32px 28px;
-    backdrop-filter: blur(8px);
-    width: 100%;
-    max-width: 560px;
-}
-
-.hero-chart { width: 100%; }
+/* Scroll indicator */
 
 /* Scroll indicator */
 .hero-scroll {
@@ -1133,17 +1093,9 @@ ul   { list-style: none; }
     .cta-strip-inner { flex-direction: column; text-align: center; gap: 20px; }
 
     /* ---- Hero ---- */
-    .hero-container {
-        grid-template-columns: 1fr;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
-    }
-    .hero-badge    { display: inline-block; }
-    .hero-actions  { justify-content: center; }
-    .hero-trust    { text-align: center; }
-    .hero-visual   { display: none; }
-    .hero-intro    { padding: 44px 0 56px; }
+    .hero-container { padding: 40px 20px 48px; }
+    .hero-badge     { display: inline-block; }
+    .hero-actions   { justify-content: center; }
 
     /* ---- Services ---- */
     .services-grid { grid-template-columns: 1fr; }
@@ -1198,7 +1150,7 @@ ul   { list-style: none; }
     .section-header { margin-bottom: 36px; }
 
     /* Hero */
-    .hero-title    { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+    .hero-title    { font-size: clamp(2rem, 9vw, 2.8rem); }
     .hero-subtitle { font-size: 0.97rem; }
     .hero-actions  { flex-direction: column; }
     .hero-actions .btn { width: 100%; justify-content: center; }
