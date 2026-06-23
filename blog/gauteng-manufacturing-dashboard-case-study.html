@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>if (localStorage.getItem('analyticsConsent') === 'false') { window['ga-disable-G-B9ZDE1XXMC'] = true; }</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9ZDE1XXMC"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B9ZDE1XXMC');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A real example of how a Gauteng manufacturing business went from spreadsheet chaos to a live management dashboard — and what changed when they did.">
+    <meta name="robots" content="index, follow">
+    <title>How a Gauteng Manufacturer Replaced Manual Reporting With a Monthly Dashboard | Uprise Analytics</title>
+    <link rel="icon" type="image/png" href="../Images/favcon.png">
+    <link rel="canonical" href="https://www.upriseanalytics.co.za/blog/gauteng-manufacturing-dashboard-case-study.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How a Gauteng Manufacturer Replaced Manual Reporting With a Monthly Dashboard">
+    <meta property="og:description" content="A real example of how a Gauteng manufacturing business went from spreadsheet chaos to a live management dashboard — and what changed.">
+    <meta property="og:image" content="https://www.upriseanalytics.co.za/Images/logo-dark.png">
+    <meta property="og:site_name" content="Uprise Analytics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .post-hero { background: var(--color-navy); color: white; padding: 120px 0 50px; }
+        .post-hero-inner { max-width: 760px; margin: 0 auto; }
+        .post-tag { display: inline-block; background: rgba(196,154,42,0.15); color: #C9A84C; border: 1px solid rgba(196,154,42,0.3); border-radius: 4px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px; }
+        .post-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.25; color: white; margin-bottom: 16px; }
+        .post-hero .post-meta { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
+        .post-body { padding: 70px 0 80px; background: white; }
+        .post-body-inner { max-width: 760px; margin: 0 auto; }
+        .post-body h2 { font-size: 1.4rem; font-weight: 700; color: var(--color-navy, #0D1B2A); margin: 40px 0 14px; }
+        .post-body p { font-size: 1rem; line-height: 1.8; color: #333; margin-bottom: 18px; }
+        .post-body ul { margin: 0 0 20px 24px; }
+        .post-body li { font-size: 1rem; line-height: 1.75; color: #333; margin-bottom: 6px; }
+        .stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+        .stat-item { background: var(--color-navy, #0D1B2A); color: white; border-radius: 10px; padding: 22px 20px; text-align: center; }
+        .stat-item .stat-num { font-size: 1.8rem; font-weight: 800; color: #C9A84C; display: block; }
+        .stat-item .stat-lbl { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 4px; }
+        .result-block { border: 1px solid #e5e7eb; border-radius: 10px; padding: 24px 28px; margin: 20px 0; border-left: 4px solid #C9A84C; }
+        .result-block h3 { font-size: 1rem; font-weight: 700; color: var(--color-navy); margin: 0 0 8px; }
+        .result-block p { margin: 0; font-size: 0.95rem; }
+        .post-cta-box { background: var(--color-navy, #0D1B2A); color: white; border-radius: 12px; padding: 40px 36px; margin-top: 48px; text-align: center; }
+        .post-cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 10px; }
+        .post-cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 22px; }
+        .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+        .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+        .disclaimer { font-size: 0.82rem; color: #888; border-top: 1px solid #e5e7eb; padding-top: 16px; margin-top: 40px; font-style: italic; }
+        @media (max-width: 600px) { .stat-strip { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo"><img src="../Images/logo-white.png" alt="Uprise Analytics" class="nav-logo-img nav-logo-white"><img src="../Images/logo-dark.png" alt="Uprise Analytics" class="nav-logo-img nav-logo-dark"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="nav-link">Home</a></li><li><a href="/#services" class="nav-link">Services</a></li><li><a href="/#about" class="nav-link">About</a></li><li><a href="/blog/" class="nav-link">Blog</a></li><li><a href="/#contact" class="nav-link">Contact</a></li>
+                <li class="nav-mobile-cta"><a href="/#contact" class="btn btn-accent">Get a Free Consultation</a></li>
+            </ul>
+            <a href="/#contact" class="btn btn-accent nav-cta">Get a Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="post-hero">
+        <div class="container">
+            <div class="post-hero-inner">
+                <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Case Study</p>
+                <span class="post-tag">Case Study</span>
+                <h1>How a Gauteng manufacturer replaced manual reporting with one dashboard &mdash; and what changed</h1>
+                <p class="post-meta">By Uprise Analytics &bull; Gauteng, South Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="post-body">
+        <div class="container">
+            <div class="post-body-inner">
+
+                <p>This is a story about a manufacturing business in Gauteng that came to us with a problem that sounded simple: "We spend too much time on reports and we never trust the numbers." By the time we'd finished our first proper look at their data, we'd found something that changed a major commercial relationship and improved their overall margin by several percentage points.</p>
+
+                <p>Here's how it unfolded.</p>
+
+                <h2>The situation when we started</h2>
+
+                <p>The business is an owner-managed manufacturer supplying engineered components to a handful of large industrial clients across Gauteng. They'd been trading for 12 years. Solid reputation. Consistent revenue. But the internal reporting situation was painful.</p>
+
+                <p>Every month, two people spent the better part of three working days pulling sales data from their invoicing system, stock levels from a separate system, and production output from &mdash; yes &mdash; a set of spreadsheets that had been built by someone who'd long since left the company. The three-day process produced a PDF management report that went to the owner and was usually two to three weeks out of date by the time anyone read it.</p>
+
+                <div class="stat-strip">
+                    <div class="stat-item"><span class="stat-num">3</span><span class="stat-lbl">Days per month spent on reporting</span></div>
+                    <div class="stat-item"><span class="stat-num">12+</span><span class="stat-lbl">Spreadsheet files in the process</span></div>
+                    <div class="stat-item"><span class="stat-num">~2 weeks</span><span class="stat-lbl">Data lag by the time the report landed</span></div>
+                </div>
+
+                <p>The owner's own words: "I never fully trust the numbers. I just accept them and move on."</p>
+
+                <h2>What we built</h2>
+
+                <p>We connected Power BI directly to their invoicing and stock systems, and built structured data extracts from the production spreadsheets to supplement it. Within four weeks, we had a live management dashboard showing:</p>
+
+                <ul>
+                    <li>Revenue and margin by product line, updated daily from the invoicing data</li>
+                    <li>Stock levels and inventory days by SKU</li>
+                    <li>Production output vs target by week</li>
+                    <li>Revenue and margin per customer, ranked by actual profitability (not volume)</li>
+                    <li>Rolling 12-month revenue trend</li>
+                </ul>
+
+                <p>The report that took three days to build now updates overnight. The owner opens it every Monday morning and is looking at current data &mdash; not last month's.</p>
+
+                <h2>What the data showed them</h2>
+
+                <p>The first month of live reporting produced three findings that the owner hadn't seen before.</p>
+
+                <div class="result-block">
+                    <h3>Finding 1: Two product lines were margin negative</h3>
+                    <p>Two categories that appeared in the revenue figures as solid performers turned out, when direct costs were properly allocated, to be generating a gross margin of under 3% &mdash; effectively breakeven, once you account for the production overhead attached to them. Both had been priced years earlier and never reviewed.</p>
+                </div>
+
+                <div class="result-block">
+                    <h3>Finding 2: One customer was responsible for 58% of actual profit</h3>
+                    <p>The revenue split across the top four customers looked balanced &mdash; roughly 25% each. But when margin was layered in, one customer &mdash; who placed consistent, predictable, standard orders and never pushed for discounts &mdash; was generating 58% of the business's total gross profit. The other three were noisy, demanding, and much less profitable per rand of revenue.</p>
+                </div>
+
+                <div class="result-block">
+                    <h3>Finding 3: Stock turnover on one component was 180+ days</h3>
+                    <p>One raw material component had been sitting in the warehouse for an average of 183 days before being consumed. That's six months of cash tied up in stock. The reason was a minimum order quantity that had been set years ago and never revisited after demand patterns changed.</p>
+                </div>
+
+                <h2>What changed</h2>
+
+                <p>The owner had a pricing conversation with the two underperforming product lines and got them to viable margins. He restructured the account management approach with the most profitable customer &mdash; more face time, faster turnaround, treated as a priority account. He renegotiated the minimum order quantity on the slow-moving component and freed up meaningful working capital.</p>
+
+                <p>None of these were complicated actions. What made them possible was simply having the numbers clearly in front of him &mdash; not buried in a PDF that was already two weeks old.</p>
+
+                <p>The management report now takes one person 20 minutes to review each month, not three days to compile. And the owner trusts the numbers.</p>
+
+                <h2>What the ongoing retainer looks like</h2>
+
+                <p>We work with this business on a monthly retainer. Every month we update the dashboard, run a short review of anything that's moved materially, and answer any ad hoc data questions that came up in the month. It's a small, consistent commitment &mdash; and the visibility it provides is now built into how the owner runs the business.</p>
+
+                <p class="disclaimer">Details in this case study have been anonymised and some figures are composites to protect client confidentiality. The patterns and findings are representative of real engagements.</p>
+
+                <div class="post-cta-box">
+                    <h3>Your business has the same story waiting in its numbers.</h3>
+                    <p>Book a free 30-minute call. We'll look at your data and tell you what we'd expect to find.</p>
+                    <a href="/#contact" class="btn btn-accent">Book a Free Call</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="/" class="nav-logo footer-logo"><img src="../Images/logo-white.png" alt="Uprise Analytics" class="footer-logo-img"></a>
+            <nav class="footer-nav" aria-label="Footer navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/#about">About</a><a href="/blog/">Blog</a><a href="/#contact">Contact</a><a href="/privacy-policy.html">Privacy Policy</a></nav>
+            <p class="footer-tagline"><em>Win With Data</em></p>
+            <p class="footer-copy">Serving manufacturing and engineering firms across Gauteng &mdash; Johannesburg &middot; Pretoria &middot; Midrand &middot; Centurion &middot; Ekurhuleni &middot; Vaal</p>
+            <p class="footer-copy">&copy; 2026 Uprise Analytics. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie notice" aria-live="polite"><div class="cookie-banner__inner"><p class="cookie-banner__text">We use cookies (Google Analytics) to understand how visitors use our website. No personal data is sold or shared. <a href="/privacy-policy.html" style="color:var(--color-accent-light);text-decoration:underline;">Learn more</a></p><div class="cookie-banner__actions"><button id="cookieManage" class="cookie-banner__decline">Manage Cookies</button><button id="cookieAccept" class="cookie-banner__accept">Accept All</button></div></div></div>
+    <div id="cookieModal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Cookie settings"><div class="cookie-modal__overlay"></div><div class="cookie-modal__box"><div class="cookie-modal__header"><h2>Cookie Settings</h2><button id="cookieModalClose" class="cookie-modal__close" aria-label="Close">&times;</button></div><div class="cookie-modal__body"><div class="cookie-row"><div class="cookie-row__info"><strong>Essential Cookies</strong><p>Required for the website to work properly.</p></div><label class="cookie-toggle"><input type="checkbox" checked disabled><span class="cookie-toggle__slider"></span></label></div><div class="cookie-row"><div class="cookie-row__info"><strong>Analytics Cookies</strong><p>Google Analytics &mdash; helps us understand how visitors use our site.</p></div><label class="cookie-toggle"><input type="checkbox" id="analyticsToggle" checked><span class="cookie-toggle__slider"></span></label></div></div><div class="cookie-modal__footer"><button id="cookieSavePrefs" class="cookie-banner__accept">Save Preferences</button></div></div></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

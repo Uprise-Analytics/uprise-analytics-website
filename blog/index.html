@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Disable GA if user opted out -->
+    <script>if (localStorage.getItem('analyticsConsent') === 'false') { window['ga-disable-G-B9ZDE1XXMC'] = true; }</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9ZDE1XXMC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B9ZDE1XXMC');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practical data and analytics guides for owner-managed manufacturing and engineering businesses in Gauteng. No jargon — just answers.">
+    <meta name="robots" content="index, follow">
+    <title>Data Analytics Blog for Gauteng Manufacturers | Uprise Analytics</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../Images/favcon.png">
+    <link rel="apple-touch-icon" href="../Images/favcon.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.upriseanalytics.co.za/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://www.upriseanalytics.co.za/blog/">
+    <meta property="og:title"       content="Data Analytics Blog for Gauteng Manufacturers | Uprise Analytics">
+    <meta property="og:description" content="Practical data and analytics guides for owner-managed manufacturing and engineering businesses in Gauteng. No jargon — just answers.">
+    <meta property="og:image"       content="https://www.upriseanalytics.co.za/Images/logo-dark.png">
+    <meta property="og:locale"      content="en_ZA">
+    <meta property="og:site_name"   content="Uprise Analytics">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .blog-hero {
+            background: var(--color-navy);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .blog-hero-badge {
+            display: inline-block;
+            background: rgba(196,154,42,0.15);
+            color: var(--color-accent-light, #C9A84C);
+            border: 1px solid rgba(196,154,42,0.3);
+            border-radius: 50px;
+            padding: 6px 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .blog-hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: white;
+        }
+        .blog-hero p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-grid-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            padding: 36px 32px;
+            box-shadow: 0 2px 16px rgba(13,27,42,0.07);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(13,27,42,0.06);
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(13,27,42,0.12);
+        }
+        .blog-card-tag {
+            display: inline-block;
+            background: rgba(196,154,42,0.1);
+            color: #8a6b1a;
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .blog-card h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-navy, #0D1B2A);
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+        .blog-card p {
+            font-size: 0.93rem;
+            color: #555;
+            line-height: 1.65;
+            flex-grow: 1;
+            margin-bottom: 24px;
+        }
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--color-blue, #1B6CA8);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: gap 0.2s ease;
+        }
+        .blog-card-link:hover {
+            gap: 10px;
+        }
+        .blog-cta-section {
+            background: var(--color-navy, #0D1B2A);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .blog-cta-section h2 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+        .blog-cta-section p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="../Images/logo-white.png" alt="Uprise Analytics" class="nav-logo-img nav-logo-white">
+                <img src="../Images/logo-dark.png"  alt="Uprise Analytics" class="nav-logo-img nav-logo-dark">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#services" class="nav-link">Services</a></li>
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/blog/" class="nav-link">Blog</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+                <li class="nav-mobile-cta"><a href="/#contact" class="btn btn-accent">Get a Free Consultation</a></li>
+            </ul>
+            <a href="/#contact" class="btn btn-accent nav-cta">Get a Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <span class="blog-hero-badge">Insights &amp; Guides</span>
+            <h1>Data &amp; analytics &mdash; straight answers for business owners</h1>
+            <p>No vendor pitches. No jargon. Just practical guides written for people who run manufacturing and engineering businesses in Gauteng.</p>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Cost &amp; ROI</span>
+                    <h2>What does an outsourced data analyst actually cost &mdash; and is it worth it?</h2>
+                    <p>Full-time analyst vs outsourced retainer. We break down the real numbers so you can decide what actually makes sense for your business &mdash; without the sales pitch.</p>
+                    <a href="outsourced-data-analyst-cost-south-africa.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Spreadsheets</span>
+                    <h2>You're running your factory on spreadsheets. Here's what that's costing you.</h2>
+                    <p>It starts with one sheet for sales and one for stock. Then it multiplies. We look at what spreadsheet chaos actually costs a manufacturing business &mdash; in time, decisions, and money.</p>
+                    <a href="running-manufacturing-business-on-spreadsheets.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Forecasting</span>
+                    <h2>Demand forecasting for manufacturers &mdash; what it is, why it matters, and how to start</h2>
+                    <p>Not a crystal ball &mdash; a systematic look at your past data to predict future demand. Here's why manufacturers need it more than anyone, and what it takes to get started.</p>
+                    <a href="demand-forecasting-manufacturers-south-africa.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">KPIs</span>
+                    <h2>The 7 numbers every manufacturing owner should see every month</h2>
+                    <p>Most owners track revenue. That's it. Here are the 7 numbers that actually tell you whether your business is healthy &mdash; and how to get them without a full-time analyst.</p>
+                    <a href="manufacturing-kpis-every-owner-should-track.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Hiring Guide</span>
+                    <h2>Data analyst, BI consultant, data scientist &mdash; what does your business actually need?</h2>
+                    <p>These titles all sound the same to a business owner. We explain the real differences &mdash; and what an owner-managed manufacturing firm typically needs &mdash; in plain English.</p>
+                    <a href="data-analyst-vs-bi-consultant.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Sales Analysis</span>
+                    <h2>Sales analysis for manufacturers &mdash; which products, customers and reps actually make you money</h2>
+                    <p>Most manufacturers track total revenue. Few know their margin per product, per customer, or per rep. Sales analysis tells you exactly where your money comes from &mdash; and where it leaks.</p>
+                    <a href="sales-analysis-for-manufacturers.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Case Study</span>
+                    <h2>How a Gauteng manufacturer replaced manual reporting with one dashboard &mdash; and what changed</h2>
+                    <p>A real-world look at how an owner-managed manufacturing firm went from spreadsheet chaos to a live management dashboard &mdash; and what they discovered when they could finally see their numbers clearly.</p>
+                    <a href="gauteng-manufacturing-dashboard-case-study.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+                <div class="blog-card">
+                    <span class="blog-card-tag">Hire vs Outsource</span>
+                    <h2>Should you hire a data analyst or outsource it? A straight answer for business owners.</h2>
+                    <p>For most Gauteng manufacturing and engineering owners, outsourcing beats hiring &mdash; but the answer isn't always obvious. We break it down with real cost comparisons and a simple decision guide.</p>
+                    <a href="hire-or-outsource-data-analyst.html" class="blog-card-link">Read more &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG CTA -->
+    <section class="blog-cta-section">
+        <div class="container">
+            <h2>Ready to talk about your numbers?</h2>
+            <p>Book a free 30-minute call &mdash; no pitch, no pressure.</p>
+            <a href="/#contact" class="btn btn-accent">Get a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="/" class="nav-logo footer-logo">
+                <img src="../Images/logo-white.png" alt="Uprise Analytics" class="footer-logo-img">
+            </a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="/">Home</a>
+                <a href="/#services">Services</a>
+                <a href="/#about">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/#contact">Contact</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-tagline"><em>Win With Data</em></p>
+            <p class="footer-copy">Serving manufacturing and engineering firms across Gauteng &mdash; Johannesburg &middot; Pretoria &middot; Midrand &middot; Centurion &middot; Ekurhuleni &middot; Vaal</p>
+            <p class="footer-copy">&copy; 2026 Uprise Analytics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie notice" aria-live="polite">
+        <div class="cookie-banner__inner">
+            <p class="cookie-banner__text">
+                We use cookies (Google Analytics) to understand how visitors use our website. No personal data is sold or shared.
+                <a href="/privacy-policy.html" style="color: var(--color-accent-light); text-decoration: underline;">Learn more</a>
+            </p>
+            <div class="cookie-banner__actions">
+                <button id="cookieManage" class="cookie-banner__decline">Manage Cookies</button>
+                <button id="cookieAccept" class="cookie-banner__accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieModal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Cookie settings">
+        <div class="cookie-modal__overlay"></div>
+        <div class="cookie-modal__box">
+            <div class="cookie-modal__header">
+                <h2>Cookie Settings</h2>
+                <button id="cookieModalClose" class="cookie-modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="cookie-modal__body">
+                <div class="cookie-row">
+                    <div class="cookie-row__info">
+                        <strong>Essential Cookies</strong>
+                        <p>Required for the website to work properly. These cannot be disabled.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="cookie-toggle__slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-row">
+                    <div class="cookie-row__info">
+                        <strong>Analytics Cookies</strong>
+                        <p>Google Analytics &mdash; helps us understand how visitors use our site. No personal data is sold or shared.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="analyticsToggle" checked>
+                        <span class="cookie-toggle__slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal__footer">
+                <button id="cookieSavePrefs" class="cookie-banner__accept">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
