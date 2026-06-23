@@ -500,10 +500,6 @@ ul   { list-style: none; }
     white-space: nowrap;
 }
 
-.tool-item:last-child {
-    border-right: none;
-}
-
 
 /* ================================================
    SERVICES
