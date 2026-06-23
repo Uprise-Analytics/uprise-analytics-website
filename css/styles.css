@@ -333,11 +333,12 @@ ul   { list-style: none; }
 .hero-container {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.4fr;
     gap: 48px;
     align-items: center;
-    padding-top: 72px;
-    padding-bottom: 56px;
+    padding-top: 80px;
+    padding-bottom: 64px;
+    max-width: 1300px;
 }
 
 .hero-content {
@@ -371,11 +372,11 @@ ul   { list-style: none; }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 5.5vw, 3.5rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
     font-weight: 800;
     color: var(--color-white);
-    line-height: 1.15;
-    margin-bottom: 22px;
+    line-height: 1.12;
+    margin-bottom: 0;
 }
 
 .hero-subtitle {
@@ -410,6 +411,28 @@ ul   { list-style: none; }
     font-size: 0.82rem;
     color: rgba(255,255,255,0.48);
     letter-spacing: 0.01em;
+}
+
+/* ================================================
+   HERO INTRO (below hero, dark continuation)
+   ================================================ */
+.hero-intro {
+    background: linear-gradient(180deg, #0c2640 0%, #0D1B2A 100%);
+    padding: 60px 0 72px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero-intro-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-intro-text {
+    font-size: 1.08rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.85;
+    margin-bottom: 36px;
 }
 
 /* Chart graphic */
@@ -471,11 +494,12 @@ ul   { list-style: none; }
     display: flex;
     align-items: center;
     gap: 32px;
-    flex-wrap: wrap;
+    padding: 0 24px;
+    overflow: hidden;
 }
 
 .tools-strip-label {
-    font-size: 0.67rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -484,20 +508,34 @@ ul   { list-style: none; }
     flex-shrink: 0;
 }
 
-.tools-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0;
+.tools-marquee-wrapper {
     flex: 1;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.tools-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 22s linear infinite;
+}
+
+.tools-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .tool-item {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--color-text);
     font-family: var(--font-heading);
-    padding: 4px 18px;
+    padding: 4px 28px;
     border-right: 1px solid var(--color-gray-200);
     white-space: nowrap;
 }
@@ -1087,9 +1125,9 @@ ul   { list-style: none; }
 
     /* ---- Tools strip ---- */
     .tools-strip         { padding: 18px 0; }
-    .tools-strip-inner   { flex-direction: column; gap: 12px; }
-    .tools-list          { justify-content: center; }
-    .tool-item           { border-right: none; padding: 3px 12px; }
+    .tools-strip-inner   { gap: 16px; padding: 0 16px; }
+    .tools-strip-label   { display: none; }
+    .tool-item           { font-size: 0.88rem; padding: 4px 20px; }
 
     /* ---- CTA strip ---- */
     .cta-strip-inner { flex-direction: column; text-align: center; gap: 20px; }
@@ -1102,10 +1140,10 @@ ul   { list-style: none; }
         text-align: center;
     }
     .hero-badge    { display: inline-block; }
-    .hero-subtitle { margin-left: auto; margin-right: auto; }
     .hero-actions  { justify-content: center; }
     .hero-trust    { text-align: center; }
     .hero-visual   { display: none; }
+    .hero-intro    { padding: 44px 0 56px; }
 
     /* ---- Services ---- */
     .services-grid { grid-template-columns: 1fr; }
