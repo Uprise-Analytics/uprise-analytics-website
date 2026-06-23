@@ -333,11 +333,15 @@ ul   { list-style: none; }
 .hero-container {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
     align-items: center;
     padding-top: 72px;
     padding-bottom: 56px;
+}
+
+.hero-content {
+    text-align: center;
 }
 
 /* About card logo */
@@ -380,12 +384,15 @@ ul   { list-style: none; }
     line-height: 1.8;
     margin-bottom: 40px;
     max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-actions {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-slogan {
@@ -416,10 +423,10 @@ ul   { list-style: none; }
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: var(--radius-lg);
-    padding: 28px 24px;
+    padding: 32px 28px;
     backdrop-filter: blur(8px);
     width: 100%;
-    max-width: 420px;
+    max-width: 560px;
 }
 
 .hero-chart { width: 100%; }
