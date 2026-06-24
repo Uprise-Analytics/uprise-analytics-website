@@ -337,7 +337,7 @@ ul   { list-style: none; }
     width: 44%;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.22;
+    opacity: 0.42;
     mask-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 60%, transparent 100%),
                 linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
     mask-composite: intersect;
