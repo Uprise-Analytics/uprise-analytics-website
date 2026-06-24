@@ -446,12 +446,7 @@ ul   { list-style: none; }
     background: var(--color-white);
     border-top: 1px solid var(--color-gray-200);
     border-bottom: 1px solid var(--color-gray-200);
-    padding: 32px 0 24px;
-}
-
-.tools-strip-heading-row {
-    text-align: center;
-    margin-bottom: 20px;
+    padding: 32px 0 28px;
 }
 
 .tools-strip-label {
@@ -459,25 +454,21 @@ ul   { list-style: none; }
     font-weight: 700;
     font-family: var(--font-heading);
     color: var(--color-navy);
-    letter-spacing: 0;
-    text-transform: none;
-    margin: 0;
-}
-
-.tools-strip-inner {
-    overflow: hidden;
+    text-align: center;
+    margin: 0 0 20px;
 }
 
 .tools-marquee-wrapper {
-    flex: 1;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    width: 100%;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .tools-track {
     display: flex;
     width: max-content;
+    will-change: transform;
     animation: marquee-scroll 30s linear infinite;
 }
 
@@ -486,8 +477,8 @@ ul   { list-style: none; }
 }
 
 @keyframes marquee-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
 .tool-item {
@@ -495,7 +486,7 @@ ul   { list-style: none; }
     font-weight: 600;
     color: var(--color-text);
     font-family: var(--font-heading);
-    padding: 4px 28px;
+    padding: 6px 32px;
     border-right: 1px solid var(--color-gray-200);
     white-space: nowrap;
 }
@@ -1080,10 +1071,9 @@ ul   { list-style: none; }
     .cta-strip { padding: 36px 0; }
 
     /* ---- Tools strip ---- */
-    .tools-strip         { padding: 18px 0; }
-    .tools-strip-inner   { gap: 16px; padding: 0 16px; }
-    .tools-strip-label   { display: none; }
-    .tool-item           { font-size: 0.88rem; padding: 4px 20px; }
+    .tools-strip       { padding: 24px 0 20px; }
+    .tools-strip-label { font-size: 1.2rem; margin-bottom: 16px; }
+    .tool-item         { font-size: 0.88rem; padding: 4px 20px; }
 
     /* ---- CTA strip ---- */
     .cta-strip-inner { flex-direction: column; text-align: center; gap: 20px; }
