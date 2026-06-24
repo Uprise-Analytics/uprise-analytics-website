@@ -330,6 +330,29 @@ ul   { list-style: none; }
     pointer-events: none;
 }
 
+.hero-dashboard-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 52%;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: linear-gradient(to right, transparent 0%, black 35%, transparent 100%),
+                linear-gradient(to top, transparent 0%, black 40%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, transparent 100%),
+                        linear-gradient(to top, transparent 0%, black 40%, transparent 100%);
+    -webkit-mask-composite: source-in;
+}
+
+.hero-dashboard-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.15;
+    filter: saturate(0.5) brightness(1.2);
+}
+
 .hero-container {
     flex: 1;
     display: flex;
