@@ -571,6 +571,7 @@ ul   { list-style: none; }
 
 .service-title {
     font-family: var(--font-heading);
+    text-align: center;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-text);
