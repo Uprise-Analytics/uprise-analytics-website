@@ -779,14 +779,6 @@ ul   { list-style: none; }
 
 /* About text side */
 .about-badge { display: block; width: fit-content; margin: 0 auto 40px; }
-
-.about-dashboard-img {
-    width: 100%;
-    border-radius: var(--radius-xl);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-    margin-bottom: 28px;
-    display: block;
-}
 .about-content .section-title { display: block; width: 100%; text-align: center; margin-bottom: 24px; font-size: clamp(1.6rem, 2.8vw, 2.2rem); }
 
 .about-text {
