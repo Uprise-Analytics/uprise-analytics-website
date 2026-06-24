@@ -755,7 +755,7 @@ ul   { list-style: none; }
 }
 
 /* About text side */
-.about-badge { display: inline-block; margin-bottom: 40px; }
+.about-badge { display: block; width: fit-content; margin: 0 auto 40px; }
 .about-content .section-title { display: block; width: 100%; text-align: center; margin-bottom: 24px; font-size: clamp(1.6rem, 2.8vw, 2.2rem); white-space: nowrap; }
 
 .about-text {
