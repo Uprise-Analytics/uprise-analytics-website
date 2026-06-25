@@ -9,7 +9,18 @@ const SCROLL_T = 60;
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > SCROLL_T);
     updateActiveNav();
+    updateWhatsAppBtn();
 });
+
+/* ---- WhatsApp FAB: show near bottom ---- */
+const whatsappFab = document.querySelector('.whatsapp-fab');
+function updateWhatsAppBtn() {
+    if (!whatsappFab) return;
+    const scrolled = window.scrollY + window.innerHeight;
+    const threshold = document.body.scrollHeight * 0.65;
+    whatsappFab.classList.toggle('whatsapp-fab--visible', scrolled >= threshold);
+}
+updateWhatsAppBtn();
 
 
 /* ---- Mobile hamburger menu ---- */

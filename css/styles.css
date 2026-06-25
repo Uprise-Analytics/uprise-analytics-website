@@ -1007,7 +1007,18 @@ ul   { list-style: none; }
 }
 
 @media (max-width: 768px) {
-    .whatsapp-fab { display: flex; }
+    .whatsapp-fab {
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+    }
+    .whatsapp-fab.whatsapp-fab--visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
 }
 
 /* ================================================
