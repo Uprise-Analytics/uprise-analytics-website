@@ -528,6 +528,17 @@ ul   { list-style: none; }
     position: relative;
 }
 
+.services::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.45);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services .container { position: relative; z-index: 1; }
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
