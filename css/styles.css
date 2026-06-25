@@ -625,18 +625,17 @@ ul   { list-style: none; }
     margin-bottom: 24px;
 }
 
-.service-images-row {
-    background: var(--color-surface);
-    padding: 0 0 64px;
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 56px;
 }
 
-.service-images-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
+.service-row:last-of-type { margin-bottom: 0; }
 
-.service-images-grid img {
+.service-row-image img {
     width: 100%;
     height: auto;
     border-radius: var(--radius-lg);
@@ -1154,6 +1153,9 @@ ul   { list-style: none; }
     /* ---- Services ---- */
     .services-grid { grid-template-columns: 1fr; }
     .service-card  { padding: 32px 24px; }
+    .service-row   { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+    .service-row .service-card { order: 1; }
+    .service-row .service-row-image { order: 2; }
 
     /* ---- Why Us ---- */
     .why-card  { padding: 28px 20px; }
