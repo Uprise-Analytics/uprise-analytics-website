@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         .post-hero { background: #0D1B2A; color: white; padding: 100px 0 40px; }
-        .post-hero-inner { max-width: 760px; margin: 0 auto; text-align: left; }
+        .post-hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
         .post-tag { display: inline-block; background: rgba(196,154,42,0.15); color: #C9A84C; border: 1px solid rgba(196,154,42,0.3); border-radius: 4px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px; }
         .post-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.25; color: white; margin-bottom: 16px; }
         .post-hero .post-meta { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
@@ -42,7 +42,18 @@
         .breadcrumb a:hover { color: white; }
         .highlight-box { background: #f0f4f8; border-left: 4px solid #1B6CA8; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 28px 0; }
         .highlight-box p { margin: 0; color: #1B6CA8; font-weight: 500; }
-    </style>
+
+        /* Featured image */
+        .post-featured-image { background: #f8f9fa; padding: 48px 0; }
+        .post-featured-image img { width: 100%; max-width: 880px; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.13); }
+
+        /* Highlight / pull quote box */
+        .post-highlight { background: linear-gradient(135deg, #EEF4FB, #e3edf8); border-left: 4px solid #C49A2A; border-radius: 8px; padding: 22px 28px; margin: 32px 0; font-size: 1.05rem; font-weight: 500; color: #0D1B2A; font-style: italic; }
+
+        /* Stat callout */
+        .post-stat { display: flex; align-items: center; gap: 20px; background: #0D1B2A; color: white; border-radius: 12px; padding: 28px 32px; margin: 36px 0; }
+        .post-stat-number { font-size: 2.8rem; font-weight: 800; color: #C49A2A; line-height: 1; white-space: nowrap; }
+        .post-stat-text { font-size: 1rem; line-height: 1.55; color: rgba(255,255,255,0.85); }    </style>
 </head>
 <body>
 
@@ -80,7 +91,13 @@
         </div>
     </section>
 
-    <section class="post-body">
+    
+    <div class="post-featured-image">
+        <div class="container">
+            <img src="../Images/manage_reporting_and_dashboards.png" alt="Management reporting dashboard" loading="lazy">
+        </div>
+    </div>
+<section class="post-body">
         <div class="container">
             <div class="post-body-inner">
 
@@ -111,6 +128,8 @@
 
                 <p>The other problem is isolation. Your sales spreadsheet doesn't talk to your stock spreadsheet. Your production sheet doesn't connect to your finance sheet. So to get one consolidated view of the business, someone has to manually pull numbers from each file and stitch them together, every single month. That's the 2-day management report. That's the bottleneck you've come to accept as normal.</p>
 
+                <div class="post-highlight">The most dangerous spreadsheet error is not the one that breaks the file. It is the one that produces a plausible-looking wrong answer, and you make a business decision based on it.</div>
+
                 <h2>What it's actually costing you</h2>
 
                 <p>Let's be concrete about the cost:</p>
@@ -122,6 +141,8 @@
                 <p><strong>Error cost:</strong> A single formula error in a margin calculation or a cost allocation can skew your view of product profitability. How many pricing decisions have you made on numbers that were subtly wrong? Hard to know, which is exactly the problem.</p>
 
                 <p><strong>Knowledge risk:</strong> Most manufacturing businesses have one person who "owns" the spreadsheets, who built them, who maintains them, who knows the formulas. If that person leaves, you lose the institutional knowledge overnight. We've seen this happen. It's not fun to untangle.</p>
+
+                <div class="post-stat"><span class="post-stat-number">7 weeks</span><p class="post-stat-text">That is how much time your team wastes each year just compiling reports, if they spend 3 days a month on it. Seven weeks of salary spent on admin, not your business.</p></div>
 
                 <h2>The alternative isn't complicated</h2>
 

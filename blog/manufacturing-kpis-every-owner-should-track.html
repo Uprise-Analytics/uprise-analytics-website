@@ -42,7 +42,18 @@
         .post-cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 22px; }
         .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
         .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
-    </style>
+
+        /* Featured image */
+        .post-featured-image { background: #f8f9fa; padding: 48px 0; }
+        .post-featured-image img { width: 100%; max-width: 880px; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.13); }
+
+        /* Highlight / pull quote box */
+        .post-highlight { background: linear-gradient(135deg, #EEF4FB, #e3edf8); border-left: 4px solid #C49A2A; border-radius: 8px; padding: 22px 28px; margin: 32px 0; font-size: 1.05rem; font-weight: 500; color: #0D1B2A; font-style: italic; }
+
+        /* Stat callout */
+        .post-stat { display: flex; align-items: center; gap: 20px; background: #0D1B2A; color: white; border-radius: 12px; padding: 28px 32px; margin: 36px 0; }
+        .post-stat-number { font-size: 2.8rem; font-weight: 800; color: #C49A2A; line-height: 1; white-space: nowrap; }
+        .post-stat-text { font-size: 1rem; line-height: 1.55; color: rgba(255,255,255,0.85); }    </style>
 </head>
 <body>
 
@@ -80,7 +91,13 @@
         </div>
     </section>
 
-    <section class="post-body">
+    
+    <div class="post-featured-image">
+        <div class="container">
+            <img src="../Images/manage_reporting_and_dashboards.png" alt="KPI management dashboard" loading="lazy">
+        </div>
+    </div>
+<section class="post-body">
         <div class="container">
             <div class="post-body-inner">
 
@@ -129,6 +146,8 @@
                     <h3>Rolling 12-month revenue trend</h3>
                     <p>Month-on-month comparison is noisy, you're comparing this March to last March, and if something unusual happened last March, the comparison is meaningless. A rolling 12-month view smooths the noise and shows you the actual direction of your business. Is revenue trending up over the last year, flat, or quietly declining? This is the number that tells you the truth about your trajectory.</p>
                 </div>
+
+                <div class="post-stat"><span class="post-stat-number">1 in 7</span><p class="post-stat-text">Most manufacturing owners track revenue. That is one number out of the seven that actually tell you whether your business is healthy.</p></div>
 
                 <h2>What to do if you don't track any of these</h2>
 
