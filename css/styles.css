@@ -983,6 +983,34 @@ ul   { list-style: none; }
 
 
 /* ================================================
+   WHATSAPP FAB (mobile only)
+   ================================================ */
+.whatsapp-fab {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-fab { display: flex; }
+}
+
+/* ================================================
    FOOTER
    ================================================ */
 .footer {
