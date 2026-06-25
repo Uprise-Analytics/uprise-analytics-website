@@ -625,6 +625,15 @@ ul   { list-style: none; }
     margin-bottom: 24px;
 }
 
+.service-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-top: 24px;
+    display: block;
+    object-fit: cover;
+}
+
 .service-list {
     display: flex;
     flex-direction: column;
