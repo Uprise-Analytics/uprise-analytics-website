@@ -631,23 +631,17 @@ ul   { list-style: none; }
 }
 
 .service-images-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .service-images-grid img {
     width: 100%;
     height: auto;
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.13);
     display: block;
-}
-
-.service-img-placeholder {
-    border-radius: var(--radius-lg);
-    background: rgba(0,0,0,0.04);
-    min-height: 200px;
 }
 
 .service-list {
@@ -1065,7 +1059,6 @@ ul   { list-style: none; }
    RESPONSIVE — TABLET  (≤ 1024px)
    ================================================ */
 @media (max-width: 1024px) {
-    .service-images-grid { grid-template-columns: 1fr 1fr; }
     .services-grid     { grid-template-columns: 1fr 1fr; }
     .why-grid          { grid-template-columns: 1fr 1fr; }
     .about-container   { gap: 48px; }
@@ -1161,7 +1154,6 @@ ul   { list-style: none; }
     /* ---- Services ---- */
     .services-grid { grid-template-columns: 1fr; }
     .service-card  { padding: 32px 24px; }
-    .service-images-grid { grid-template-columns: 1fr; }
 
     /* ---- Why Us ---- */
     .why-card  { padding: 28px 20px; }
