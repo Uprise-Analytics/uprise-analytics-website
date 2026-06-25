@@ -1124,7 +1124,7 @@ ul   { list-style: none; }
     /* Logo: swap to dark version, larger on mobile */
     .nav-logo-white { display: none; }
     .nav-logo-dark  { display: block; }
-    .nav-logo-img   { height: 48px; }
+    .nav-logo-img   { height: 62px; }
 
     /* Nav links: dark text on white dropdown */
     .nav-link                { color: rgba(13,27,42,0.72); padding: 14px 12px; font-size: 0.95rem; }
@@ -1234,7 +1234,7 @@ ul   { list-style: none; }
 @media (max-width: 480px) {
     :root { --nav-height: 64px; }
 
-    .nav-logo-img   { height: 40px; }
+    .nav-logo-img   { height: 56px; }
 
     /* Section padding tighter on small phones */
     .services  { padding: 48px 0; }
