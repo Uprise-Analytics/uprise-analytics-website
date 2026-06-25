@@ -552,6 +552,7 @@ ul   { list-style: none; }
     padding: 56px 40px;
     position: relative;
     transition: var(--transition);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
 }
 
 .service-card:hover {
